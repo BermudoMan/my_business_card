@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block Edu %}
+    <h2>Education</h2>
+    <ul>
+        {% for s in object_list %}
+            <li>{{ s.position }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

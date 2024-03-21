@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block Publ %}
+    <h2>Publications</h2>
+    <ul>
+        {% for s in object_list %}
+            <li>{{ s.article_title }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

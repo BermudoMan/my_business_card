@@ -1,0 +1,14 @@
+body {
+    background: rgba(25, 25, 25, 1);
+}
+
+header {
+    background: rgba(0, 0, 0, 1);
+}
+
+.title {
+    color: #fff;
+}
+.menu {
+    color: #fff;
+}
