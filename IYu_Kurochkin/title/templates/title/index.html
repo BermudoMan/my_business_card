@@ -1,9 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block Title %}
 <div class="title">
     <h1>Портфолио КУРОЧКИН И.Ю.</h1>
+    <div class="container">
+        <p><img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+    </div>
 </div>
+
+
 <div class="menu">
     <a href="{% url 'edu' %}">Edu</a>
     <a href="{% url 'project_part' %}">project_part</a>

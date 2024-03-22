@@ -1,14 +1,47 @@
+.tektur-<uniquifier> {
+  font-family: "Tektur", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
 body {
     background: rgba(25, 25, 25, 1);
+    color: #fff;
+    font-family: "Tektur", sans-serif;
+    font-variation-settings:
+    "wdth" 87.5;
 }
 
 header {
     background: rgba(0, 0, 0, 1);
+    font-family: "Tektur", sans-serif;
 }
 
 .title {
     color: #fff;
+    font-family: "Tektur", sans-serif;
+    font-weight: 800;
+     font-variation-settings:
+    "wdth" 100;
 }
 .menu {
     color: #fff;
+    font-family: "Tektur", sans-serif;
+}
+
+
+.container {
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.title_img {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 30%;
 }

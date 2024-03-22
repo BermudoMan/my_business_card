@@ -6,17 +6,16 @@
     <meta charset="UTF-8">
     <title>Резюме</title>
     <link type="text/css" href="{% static 'title/css/style.css' %}" rel="stylesheet" />
-<!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="body">
 <header class="header">
-    <div><a href="">Краткая информация</a></div>
-    <div><a href="">Текущее время</a></div>
-    <div><a href="">Контакты</a></div>
+    <div><a href="">Краткая информация</a> <time></time> <a href="">Контакты</a></div>
 </header>
-</body>
 
-</html>
+
 {% block Title %}
 {% endblock %}
 
@@ -31,3 +30,8 @@
 
 {% block Publ %}
 {% endblock %}
+
+</body>
+
+</html>
+
