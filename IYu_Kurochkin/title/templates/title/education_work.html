@@ -2,10 +2,10 @@
 {% load static %}
 
 {% block Edu %}
-    <h2>Education</h2>
+    <h2>Education & Work experience</h2>
     <ul>
         {% for s in object_list %}
-            <li>{{ s.position }}</li>
+            <li>{{ s.date }} -- {{ s.position }}[{{ s.type }}] -- {{ s.organisation }} </li>
         {% endfor %}
     </ul>
 {% endblock %}

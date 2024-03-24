@@ -4,14 +4,26 @@ from django.views.generic import ListView, DetailView, TemplateView
 from .models import EducationWork, Publications, SkillCategory, ProjectsParticipate, Skills
 
 
-class TitlePage(TemplateView):
-    template_name = 'title/index.html'
+def title_page(request):
+    edu = EducationWork.objects.all()
+    skills = Skills.objects.all()
+    publ = Publications.objects.all()
+    proj = ProjectsParticipate.objects.all()
+    data = {
+        'skills': skills,
+        'edu': edu,
+        'publ': publ,
+        'proj': proj,
+    }
+
+    return render(request, 'title/index.html', context=data)
+
 
 
 class SkillsView(ListView):
     model = Skills
     template_name = 'title/skills.html'
-
+    context_object_name = 'skills'
 
 class EducationWorkView(ListView):
     model = EducationWork

@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% include "publications.html" %}
+
 {% load static %}
 
 {% block Title %}
@@ -9,13 +11,53 @@
     </div>
 </div>
 
-
 <div class="menu">
-    <a href="{% url 'edu' %}">Edu</a>
-    <a href="{% url 'project_part' %}">project_part</a>
-    <a href="{% url 'publications' %}">publications</a>
-    <a href="{% url 'skills' %}">skills</a>
+    <a href="edu">Edu</a>
+    <a href="project_part">project_part</a>
+    <a href="publications">publications</a>
+    <a href="skills">skills</a>
 </div>
 {% endblock %}
 
-
+<div class="all_cat">
+{% block Skills %}
+    <a>Skills</a><br>
+    <div class="cat">
+    <ul>
+        {% for s in skills %}
+            <li>{{ s.skill }} </li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}
+{% block Edu %}
+    <a>Education & Work experience</a><br>
+    <div class="cat">
+    <ul>
+        {% for s in edu %}
+            <li>{{ s.date }} -- {{ s.position }}[{{ s.type }}] -- {{ s.organisation }} </li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}
+{% block Publ %}
+    <a>Publications</a><br>
+    <div class="cat">
+    <ul>
+        {% for s in publ %}
+            <li>{{ s.authors }} "{{ s.article_title }}" / {{ s.journal }} -- {{ s.year }} -- DOI: {{ s.doi }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}
+{% block Proj_Part %}
+    <a>Projects</a><br>
+    <div class="cat">
+    <ul>
+        {% for s in proj %}
+            <li>{{ s.project_year_start }}-{{ s.project_year_end }} -- {{ s.project_title }} -- {{ s.project_number }} ({{ s.foundation}})</li>
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}
+</div>

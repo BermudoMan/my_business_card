@@ -4,28 +4,42 @@
   font-weight: <weight>;
   font-style: normal;
   font-variation-settings:
-    "wdth" 100;
+  "wdth" 100;
 }
 
 
 body {
     background: rgba(25, 25, 25, 1);
-    color: #fff;
-    font-family: "Tektur", sans-serif;
-    font-variation-settings:
-    "wdth" 87.5;
 }
 
-header {
+.header {
+    margin-top: -20px;
+    margin-bottom: 10px;
+    margin-left: -10px;
+    margin-right: -20px;
     background: rgba(0, 0, 0, 1);
     font-family: "Tektur", sans-serif;
+    font-variation-settings:
+}
+
+.head-text a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    text-align: center;
+    padding: 55px;
+
+}
+.head-text a:hover {
+    font-size: 26px;
+    color: Goldenrod;
 }
 
 .title {
     color: #fff;
     font-family: "Tektur", sans-serif;
     font-weight: 800;
-     font-variation-settings:
+    font-variation-settings:
     "wdth" 100;
 }
 .menu {
@@ -33,7 +47,7 @@ header {
     font-family: "Tektur", sans-serif;
 }
 
-
+/* photo */
 .container {
     margin-top: 10px;
     position: relative;
@@ -44,4 +58,9 @@ header {
     margin-top: 15px;
     margin-bottom: 15px;
     width: 30%;
+    position: absolute;
+    float: center;
 }
+
+
+/* cat_view */

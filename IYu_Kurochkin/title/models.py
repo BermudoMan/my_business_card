@@ -2,9 +2,11 @@ from django.db import models
 
 
 class EducationWork(models.Model):
-    date = models.DateField(verbose_name='Date')
+    date = models.CharField(max_length=20, verbose_name='Date')
     position = models.CharField(max_length=255, verbose_name='status')
     organisation = models.CharField(max_length=255, verbose_name='organisation_name')
+    last_actual_year = models.IntegerField(max_length=4, verbose_name='last_actual_year', blank=True, null=True)
+    type = models.CharField(max_length=40, verbose_name='type', blank=True, null=True)
 
     def __str__(self):
         return self.position
@@ -12,7 +14,7 @@ class EducationWork(models.Model):
     class Meta:
         verbose_name = 'EducationWork'
         verbose_name_plural = 'EducationWork'
-        ordering = ['date']
+        ordering = ['-last_actual_year']
 
 
 class Publications(models.Model):
@@ -51,7 +53,8 @@ class ProjectsParticipate(models.Model):
     project_title = models.CharField(max_length=400, verbose_name='project_title')
     foundation = models.CharField(max_length=300, verbose_name='foundation')
     project_number = models.CharField(max_length=50, verbose_name='project_number')
-    project_years = models.CharField(max_length=150, verbose_name='project_years')
+    project_year_start = models.IntegerField(verbose_name='project_year_start', null=True, blank=True)
+    project_year_end = models.IntegerField(verbose_name='project_year_end', null=True, blank=True)
 
     def __str__(self):
         return self.project_title
@@ -59,7 +62,7 @@ class ProjectsParticipate(models.Model):
     class Meta:
         verbose_name = 'ProjectsParticipate'
         verbose_name_plural = 'ProjectsParticipate'
-
+        ordering = ['-project_year_end']
 
 class Skills(models.Model):
     skill = models.CharField(max_length=500, verbose_name='Skill')
@@ -71,6 +74,7 @@ class Skills(models.Model):
     class Meta:
         verbose_name = 'Skills'
         verbose_name_plural = 'Skills'
+        ordering = ['skill_cat']
 
 
 class SkillCategory(models.Model):
