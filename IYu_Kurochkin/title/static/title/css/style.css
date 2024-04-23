@@ -1,66 +1,96 @@
-.tektur-<uniquifier> {
-  font-family: "Tektur", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-  "wdth" 100;
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 
 body {
     background: rgba(25, 25, 25, 1);
+    width: 100%; 
 }
 
-.header {
-    margin-top: -20px;
-    margin-bottom: 10px;
-    margin-left: -10px;
-    margin-right: -20px;
+
+.header, .footer {
     background: rgba(0, 0, 0, 1);
     font-family: "Tektur", sans-serif;
-    font-variation-settings:
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
 }
-
-.head-text a {
+.header a, .footer a {
     text-decoration: none;
     font-size: 25px;
     color: #fff;
-    text-align: center;
-    padding: 55px;
-
 }
-.head-text a:hover {
+.header a:hover, .footer a:hover {
     font-size: 26px;
     color: Goldenrod;
 }
 
+
+
 .title {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title h1 {
     color: #fff;
     font-family: "Tektur", sans-serif;
     font-weight: 800;
-    font-variation-settings:
-    "wdth" 100;
+    font-variation-settings: "wdth" 100;
+    font-size: 50px;
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
 }
 .menu {
     color: #fff;
     font-family: "Tektur", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-/* photo */
-.container {
-    margin-top: 10px;
-    position: relative;
-    text-align: center;
-}
-
 .title_img {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 30%;
-    position: absolute;
-    float: center;
+    width: 35%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+    z-index: 0;
 }
 
+
+#skills, #edu, #publications, #project_part {
+    text-decoration: none;
+    color: Goldenrod;
+    font-family: "Tektur", sans-serif;
+}
+
+
+/*.title_img {
+  display: inline-block;
+  background: #0083ff;
+  line-height: 0;
+}
+.title_img {
+  transition: filter 0.5s linear;
+  filter: brightness(2) grayscale(1) opacity(0.5);
+}*/
+
+.title_img:hover {
+  filter: none;
+  filter: brightness(0.5) opacity(0.5);
+}
 
 /* cat_view */
+ul {
+    color: #fff;
+    font-family: "Tektur", sans-serif;
+}

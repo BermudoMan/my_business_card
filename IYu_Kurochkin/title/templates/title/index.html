@@ -6,22 +6,23 @@
 {% block Title %}
 <div class="title">
     <h1>Портфолио КУРОЧКИН И.Ю.</h1>
-    <div class="container">
-        <p><img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+    <p><img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+    <div class="menu">
+        <li><a href="#edu">Education & Work experience</a></li>
+        <li><a href="#project_part">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#skills">Skills</a></li>
     </div>
 </div>
 
-<div class="menu">
-    <a href="edu">Edu</a>
-    <a href="project_part">project_part</a>
-    <a href="publications">publications</a>
-    <a href="skills">skills</a>
-</div>
+
+
 {% endblock %}
+
 
 <div class="all_cat">
 {% block Skills %}
-    <a>Skills</a><br>
+    <a href="skills" id="skills">Skills</a><br>
     <div class="cat">
     <ul>
         {% for s in skills %}
@@ -31,7 +32,7 @@
     </div>
 {% endblock %}
 {% block Edu %}
-    <a>Education & Work experience</a><br>
+    <a href="edu" id="edu">Education & Work experience</a><br>
     <div class="cat">
     <ul>
         {% for s in edu %}
@@ -41,7 +42,7 @@
     </div>
 {% endblock %}
 {% block Publ %}
-    <a>Publications</a><br>
+    <a href="publications" id="publications">Publications</a><br>
     <div class="cat">
     <ul>
         {% for s in publ %}
@@ -51,7 +52,7 @@
     </div>
 {% endblock %}
 {% block Proj_Part %}
-    <a>Projects</a><br>
+    <a href="project_part" id="project_part">Projects</a><br>
     <div class="cat">
     <ul>
         {% for s in proj %}
