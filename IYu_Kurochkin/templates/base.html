@@ -6,19 +6,17 @@
     <meta charset="UTF-8">
     <title>Резюме</title>
     <link type="text/css" href="{% static 'title/css/style.css' %}" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body class="body">
 <header>
     <div class="header">
-        <h1>
-            <a href="">Краткая информация</a>
-            <time></time>
-            <a href="">Контакты</div>
-        </h1>
+        Курочкин И.Ю.<br><p>Портфолио<p>
+    </div>
 </header>
 
-
-{% block Title %}
+{% block Scroll %}
 {% endblock %}
 
 {% block Skills %}
@@ -32,15 +30,6 @@
 
 {% block Publ %}
 {% endblock %}
-
-<footer>
-    <div class="footer">
-        <h1>
-            <a href="">Краткая информация</a>
-            <time></time>
-            <a href="">Контакты</div>
-        </h1>
-</footer>
 
 </body>
 </html>

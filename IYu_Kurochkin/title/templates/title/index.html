@@ -3,62 +3,22 @@
 
 {% load static %}
 
-{% block Title %}
-<div class="title">
-    <h1>Портфолио КУРОЧКИН И.Ю.</h1>
-    <p><img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+{% block Scroll %}
+<div class="Scroll">
     <div class="menu">
-        <li><a href="#edu">Education & Work experience</a></li>
-        <li><a href="#project_part">Projects</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#skills">Skills</a></li>
-    </div>
+        <li><a href="edu" class="text">Education & Work experience</a><p>
+            <img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+        </li>
+        <li><a href="project_part" class="text">Projects</a>
+            <img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+        </li>
+        <li><a href="publications" class="text">Publications</a>
+            <img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+        </li>
+        <li><a href="skills" class="text">Skills</a></li>
+            <img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></p>
+        </li>
+
 </div>
-
-
-
 {% endblock %}
 
-
-<div class="all_cat">
-{% block Skills %}
-    <a href="skills" id="skills">Skills</a><br>
-    <div class="cat">
-    <ul>
-        {% for s in skills %}
-            <li>{{ s.skill }} </li>
-        {% endfor %}
-    </ul>
-    </div>
-{% endblock %}
-{% block Edu %}
-    <a href="edu" id="edu">Education & Work experience</a><br>
-    <div class="cat">
-    <ul>
-        {% for s in edu %}
-            <li>{{ s.date }} -- {{ s.position }}[{{ s.type }}] -- {{ s.organisation }} </li>
-        {% endfor %}
-    </ul>
-    </div>
-{% endblock %}
-{% block Publ %}
-    <a href="publications" id="publications">Publications</a><br>
-    <div class="cat">
-    <ul>
-        {% for s in publ %}
-            <li>{{ s.authors }} "{{ s.article_title }}" / {{ s.journal }} -- {{ s.year }} -- DOI: {{ s.doi }}</li>
-        {% endfor %}
-    </ul>
-    </div>
-{% endblock %}
-{% block Proj_Part %}
-    <a href="project_part" id="project_part">Projects</a><br>
-    <div class="cat">
-    <ul>
-        {% for s in proj %}
-            <li>{{ s.project_year_start }}-{{ s.project_year_end }} -- {{ s.project_title }} -- {{ s.project_number }} ({{ s.foundation}})</li>
-        {% endfor %}
-    </ul>
-    </div>
-{% endblock %}
-</div>
