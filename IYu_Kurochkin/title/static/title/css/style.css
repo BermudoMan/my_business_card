@@ -11,7 +11,10 @@ body {
     width: 100%; 
 }
 
-
+header a{
+    text-decoration: none;
+    color: white;
+}
 header {
     background: rgba(0, 0, 0, 1);
     font-family: "Tektur", sans-serif;
@@ -23,7 +26,6 @@ header {
     padding: 1%;
     border-bottom: 2px solid Goldenrod;
 }
-
 header p {
     font-size: 30px;
     font-weight: 400;
@@ -31,51 +33,44 @@ header p {
 }
 
 
-.Scroll {
-    height: 700px;
-    overflow-x: scroll;
+
+div.Scroll {
+    overflow-x: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+div.Scroll:hover {
+    transform: translatex(120px);
 }
 
+div.Scroll a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; 
+    color: white;
+    margin: 35px;
+}
+div.Scroll a:hover {
+    transform: translatex(120px);
+}
+div.Scroll .text {
+    font-family: "Tektur", sans-serif;
+    font-size: 25px;
+    position: sticky;
+    top: 50%;
+    z-index: 1;
+    text-align: center;
+}
 
-
-.title_img {
-    width: 35%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+div.Scroll img {
+    position: relative;
+    width: 600px;
+    z-index: 0;
     -webkit-transition: all 1s ease;
-            transition: all 1s ease;
-}
-.title_img:hover {
+            transition: all 1s ease;}
+div.Scroll img:hover {
+    width: 610px;
     filter: none;
     filter: brightness(0.5) opacity(0.5);
-}
-
-
-/*------------------*/
-
-
-.menu {
-    color: #fff;
-    font-family: "Tektur", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-
-
-
-
-/*.title_img {
-  display: inline-block;
-  background: #0083ff;
-  line-height: 0;
-}
-.title_img {
-  transition: filter 0.5s linear;
-  filter: brightness(2) grayscale(1) opacity(0.5);
-}*/
-
+}*
 
