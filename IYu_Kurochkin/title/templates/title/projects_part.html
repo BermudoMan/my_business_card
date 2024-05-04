@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block Proj_Part %}
+    <div class="publications_style">
     <h2>Projects</h2>
     <ul>
         {% for s in object_list %}
             <li>{{ s.project_year_start }}-{{ s.project_year_end }} -- {{ s.project_title }} -- {{ s.project_number }} ({{ s.foundation}})</li>
         {% endfor %}
     </ul>
+    </div>
 {% endblock %}
 

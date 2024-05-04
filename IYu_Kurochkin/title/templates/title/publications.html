@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block Publ %}
+    <div class="publications_style">
     <h2>Publications</h2>
     <ul>
         {% for s in object_list %}
             <li>{{ s.authors }} "{{ s.article_title }}" / {{ s.journal }} -- {{ s.year }} -- DOI: {{ s.doi }}</li>
         {% endfor %}
     </ul>
+    </div>
 {% endblock %}
 

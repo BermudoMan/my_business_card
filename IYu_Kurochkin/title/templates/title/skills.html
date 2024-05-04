@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block Skills %}
+    <div class="publications_style">
     <h2>Skills</h2>
     <ul>
         {% for s in skills %}
             <li>{{ s.skill }} </li>
         {% endfor %}
     </ul>
+    </div>
 {% endblock %}
 
