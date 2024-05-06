@@ -25,6 +25,28 @@ class SkillsView(ListView):
     template_name = 'title/skills.html'
     context_object_name = 'skills'
 
+class SkillsViewProg(ListView):
+    model = Skills
+    template_name = 'title/skills_prog.html'
+    context_object_name = 'skills'
+
+class SkillsOther(ListView):
+    model = Skills
+    template_name = 'title/other_skills.html'
+    context_object_name = 'skills'
+
+class SkillsQC(ListView):
+    model = Skills
+    template_name = 'title/qc_skills.html'
+    context_object_name = 'skills'
+
+class SkillsViewDraw(ListView):
+    model = Skills
+    template_name = 'title/drawing_skills.html'
+    context_object_name = 'skills'
+
+
+
 class EducationWorkView(ListView):
     model = EducationWork
     template_name = 'title/education_work.html'

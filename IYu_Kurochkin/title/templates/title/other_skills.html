@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Skills %}
+    <div class="publications_style">
+    <h2>Data manipulation</h2>
+    <ul>
+        {% for s in skills %}
+            {% if s.skill_cat_id == 2 %}
+                <li>{{ s.skill }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <h2>Text editing</h2>
+    <ul>
+        {% for s in skills %}
+            {% if s.skill_cat_id == 2 %}
+                <li>{{ s.skill }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <h2>Specific software</h2>
+    <ul>
+        {% for s in skills %}
+            {% if s.skill_cat_id == 4 %}
+                <li>{{ s.skill }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    </div>
+
+{% endblock %}
+

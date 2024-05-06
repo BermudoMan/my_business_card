@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block Skills %}
+    <div class="publications_style">
+    <h2>Programming skills</h2>
+    <ul>
+        {% for s in skills %}
+            {% if s.skill_cat_id == 6 %}
+                <li>{{ s.skill }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    </div>
+{% endblock %}
+
