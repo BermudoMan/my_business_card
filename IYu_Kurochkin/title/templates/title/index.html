@@ -5,16 +5,37 @@
 
 {% block Scroll %}
 <div class="Scroll">
-
-            <a href="edu"><p class="text">Education & Work experience</p><img class='title_img' src="{% static 'title/img/edu2.jpg' %}" alt="1"></a>
-            <a href="skills_prog"><p class="text">Programming skills</p><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a>
-            <a href="drawing_skills"><p class="text">Drawing skills</p><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a>
-            <a href="qc_skills"><p class="text">Quantum chemistry exp.</p><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a>
-            <a href="other_skills"><p class="text">Other skills</p><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a>
-            <a href="project_part"><p class="text">Projects</p><img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></a>
-            <a href="publications"><p class="text">Publications</p><img class='title_img' src="{% static 'title/img/publications.png' %}" alt="1"></a>
+    <ul class="ul">
+            <li class="li"><a href="edu" class="scrollable-div"><div class="text">Образование и опыт работы</div><img class='title_img' src="{% static 'title/img/edu2.jpg' %}" alt="1"></a></li>
+            <li class="li"><a href="skills_prog" class="scrollable-div"><div class="text">Программирование (Стек технологий)</div><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a></li>
+            <li class="li"><a href="drawing_skills" class="scrollable-div"><div class="text">Работа с изображениями</div><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a></li>
+            <li class="li"><a href="qc_skills" class="scrollable-div"><div class="text"><p>ПО для квантово-химических расчетов</div></p><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a></li>
+            <li class="li"><a href="other_skills" class="scrollable-div"><div class="text">Иные навыки</div><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1"></a></li>
+            <li class="li"><a href="project_part" class="scrollable-div"><div class="text">Участие в финансируемых проектах</div><img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1"></a></li>
+            <li class="li"><a href="publications" class="scrollable-div"><div class="text">Публикации</div><img class='title_img' src="{% static 'title/img/publications.png' %}" alt="1"></a></li>
+            <li class="li"><a href="publications" class="scrollable-div"><div class="text">Обо мне</div><img class='title_img' src="{% static 'title/img/publications.png' %}" alt="1"></a></li>
+    </ul>
 </div>
 <script src="{% static 'title/js/scale.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function() {
+        var docWidth = $('body').width(),
+        slidesWidth = $('ul').width(),
+        rangeX = slidesWidth - docWidth,
+        $images = $('ul');
+
+        $(document).on('mousemove', function(e) {
+              var mouseX = e.pageX,
+                offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+
+              $images.css({
+                '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+                'transform': 'translate3d(' + -offset + 'px,0,0)'
+              });
+            });
+        });
+</script>
 
 {% endblock %}
 

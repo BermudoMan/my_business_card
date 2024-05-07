@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: rgba(25, 25, 25, 1);
+    width: 100%; 
+    font-family: "Tektur", sans-serif;
+    color: white;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+header {
+    background: rgba(0, 0, 0, 1);
+    font-family: "Tektur", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    text-align: right;
+    height: 15%;
+    padding: 1%;
+    border-bottom: 2px solid Goldenrod;
+}
+header p {
+    font-size: 30px;
+    font-weight: 400;
+    color: Goldenrod;
+}
+
+
+
+/*div.Scroll {
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+div.Scroll::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+}
+div.Scroll a {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; 
+    color: white;
+    margin: 35px;
+}
+*/
+div.Scroll div.text {    
+    width: 610px;
+}
+div.Scroll .text {
+    font-family: "Tektur", sans-serif;
+    font-size: 35px;
+    color: Goldenrod;
+    position: sticky;
+    top: 50%;
+    z-index: 1;
+    text-align: center;
+    font-weight: 20%;
+    overflow-wrap: inherit;
+}
+
+
+div.Scroll img {
+    position: relative;
+    width: 600px;
+    z-index: 0;
+    -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+    filter: brightness(0.5) opacity(0.5);
+}
+div.Scroll img:hover {
+    width: 610px;
+    filter: none;
+    filter: brightness(-0.2) opacity(-0.2);
+}
+
+.global_text_style {
+    font-family: "Tektur", sans-serif;
+    font-size: 25px;
+    color: white;
+    position: sticky;
+    top: 50%;
+    text-align: center;
+}
+
+.publications_style {
+    color: black;
+    background: goldenrod;
+    margin-top: 1%;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 50%;
+    padding: 5%;
+    text-align: left;
+}
+
+.Scroll {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Tektur", sans-serif;
+    overflow: hidden;
+}
+
+ul.ul {
+    margin-left: 1%;
+/*    margin: 0 25%;
+    padding: 0;*/
+    display: flex;
+}
+
+ul.ul li {
+    list-style: none;
+}
+ul.ul li a {
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 20px 20px;
+    transition: 1000.5s;
+}
+
+ul.ul li a:hover {
+
+}
+
+/*ul.ul {
+    margin: 0 15%;
+    padding: 0;
+    display: flex;
+}
+
+ul.ul li {
+    position: relative;
+    list-style: none;
+}
+
+ul.ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 4em;
+    margin: 0 100px;
+    transition: 0.5s;
+    padding: 5px 20px;
+    white-space: nowrap;
+    z-index: 2;
+}
+ul.ul li:hover a{
+    color: #fff;
+}
+ul.ul li img {
+    width: 610px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-350px);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+ul.ul li:hover img {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-350px);
+
+}
+
+ul.ul li:nth-child(even) img {
+    width: 610px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.5s;
+}
+ul.ul li:nth-child(even):hover img {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(25px);
+
+}*/
