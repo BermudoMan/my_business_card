@@ -20,21 +20,28 @@ header a{
 header {
     background: rgba(0, 0, 0, 1);
     font-family: "Tektur", sans-serif;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: 700;
     color: white;
-    text-align: right;
     height: 15%;
-    padding: 1%;
+    padding: 2.5%;
     border-bottom: 2px solid Goldenrod;
 }
 header p {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 400;
     color: Goldenrod;
 }
 
-
+header .head_1 {
+    text-align: left;
+}
+header img{
+    width: 200px;
+    position: absolute;
+    right: 1%;
+    top: 10px;
+}
 
 /*div.Scroll {
     overflow-x: scroll;
@@ -108,7 +115,7 @@ div.Scroll img:hover {
     padding: 0;
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 0.5%;
     font-family: "Tektur", sans-serif;
     overflow: hidden;
 }
@@ -132,8 +139,9 @@ ul.ul li a {
 }
 
 ul.ul li a:hover {
-
 }
+
+
 
 /*ul.ul {
     margin: 0 15%;
