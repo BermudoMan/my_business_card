@@ -26,7 +26,7 @@ class Publications(models.Model):
     e_library = models.BooleanField()
     year = models.IntegerField(verbose_name='year')
     journal = models.CharField(max_length=400, verbose_name='journal', default=' ')
-    quartile = models.IntegerField(verbose_name='quartile', default=1)
+    quartile = models.IntegerField(verbose_name='quartile', default=1, null=True, blank=True)
 
     def __str__(self):
         return self.article_title

@@ -17,18 +17,26 @@ header a{
     text-decoration: none;
     color: white;
 }
+.head_1 {
+    height: 25vh;
+    display: flex;
+    align-items: center;}
 header {
     background: rgba(0, 0, 0, 1);
+    height: 33%;
     font-family: "Tektur", sans-serif;
-    font-size: 45px;
+    font-size: 7vh;
     font-weight: 700;
     color: white;
-    height: 15%;
-    padding: 2.5%;
-    border-bottom: 2px solid Goldenrod;
+    border-bottom: 0.1vh solid Goldenrod;
 }
-header p {
-    font-size: 35px;
+header a {
+    justify-content: center;
+    align-items: center;
+    padding-left: 1%;
+}
+header a b {
+    font-size: 5vh;
     font-weight: 400;
     color: Goldenrod;
 }
@@ -37,7 +45,7 @@ header .head_1 {
     text-align: left;
 }
 header img{
-    width: 200px;
+    width: 25vh;
     position: absolute;
     right: 1%;
     top: 10px;
@@ -60,9 +68,7 @@ div.Scroll a {
     margin: 35px;
 }
 */
-div.Scroll div.text {    
-    width: 610px;
-}
+
 div.Scroll .text {
     font-family: "Tektur", sans-serif;
     font-size: 35px;
@@ -70,9 +76,6 @@ div.Scroll .text {
     position: sticky;
     top: 50%;
     z-index: 1;
-    text-align: center;
-    font-weight: 20%;
-    overflow-wrap: inherit;
 }
 
 
@@ -119,7 +122,9 @@ div.Scroll img:hover {
     font-family: "Tektur", sans-serif;
     overflow: hidden;
 }
-
+ul.ul a {
+    text-decoration: none;
+}
 ul.ul {
     margin-left: 1%;
 /*    margin: 0 25%;
@@ -130,18 +135,22 @@ ul.ul {
 ul.ul li {
     list-style: none;
 }
-ul.ul li a {
-    color: white;
-    text-decoration: none;
-    white-space: nowrap;
-    padding: 20px 20px;
-    transition: 1000.5s;
-}
+
 
 ul.ul li a:hover {
 }
 
-
+ul.ul li div div.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ word-break: break-all;
+}
+ul.ul li div div.text b {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /*ul.ul {
     margin: 0 15%;
