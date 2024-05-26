@@ -18,25 +18,27 @@ header a{
     color: white;
 }
 .head_1 {
-    height: 25vh;
+    height: 12vh;
     display: flex;
-    align-items: center;}
+    align-items: center;
+    border-bottom: 0.1vh solid Goldenrod;
+}
 header {
     background: rgba(0, 0, 0, 1);
     height: 33%;
     font-family: "Tektur", sans-serif;
-    font-size: 7vh;
+    font-size: 4vh;
     font-weight: 700;
     color: white;
-    border-bottom: 0.1vh solid Goldenrod;
 }
+
 header a {
     justify-content: center;
     align-items: center;
     padding-left: 1%;
 }
 header a b {
-    font-size: 5vh;
+    font-size: 3vh;
     font-weight: 400;
     color: Goldenrod;
 }
@@ -45,7 +47,7 @@ header .head_1 {
     text-align: left;
 }
 header img{
-    width: 25vh;
+    width: 11vh;
     position: absolute;
     right: 1%;
     top: 10px;
@@ -69,38 +71,71 @@ div.Scroll a {
 }
 */
 
-div.Scroll .text {
-    font-family: "Tektur", sans-serif;
-    font-size: 35px;
-    color: Goldenrod;
-    position: sticky;
-    top: 50%;
-    z-index: 1;
+div.Scroll li{
+    width: 600px;
+    height: 600px;
+    text-align: center;
+    align-items: center;
+/*    border: 0.1vh solid red;*/
+
+/*    display: flex;*/
 }
 
 
 div.Scroll img {
     position: relative;
-    width: 600px;
-    z-index: 0;
+    text-align: center;
+    align-items: center;
+/*    max-width: 100%; 
+    max-height: 100%;*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+    margin: auto;
+    top: 0; right: 0; bottom: 0; left: 0;
+/*    padding-top: 50px;*/
+/*    text-align: center;*/
+    width: 500px;
     -webkit-transition: all 1s ease;
             transition: all 1s ease;
     filter: brightness(0.5) opacity(0.5);
+    z-index: 0;
+}
+div.Scroll img {
+    border: 5px solid Goldenrod;
 }
 div.Scroll img:hover {
-    width: 610px;
+    position: relative;
+    padding-top: 0px;
+    width: 590px;
     filter: none;
     filter: brightness(-0.2) opacity(-0.2);
+    border: 5px solid green;
+}
+div.Scroll .text {
+    display: flex;
+    position: relative;
+    top: -300px; 
+/*    right: -90px;*/
+    width: 50%;
+    margin: 0 auto;
+    font-size: 30px;
+    color: Goldenrod;
+    text-align: center;
+/*    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;*/
+    margin: auto;
 }
 
-.global_text_style {
+/*.global_text_style {
     font-family: "Tektur", sans-serif;
     font-size: 25px;
     color: white;
     position: sticky;
     top: 50%;
     text-align: center;
-}
+}*/
 
 .publications_style {
     color: black;
@@ -126,31 +161,33 @@ ul.ul a {
     text-decoration: none;
 }
 ul.ul {
-    margin-left: 1%;
-/*    margin: 0 25%;
-    padding: 0;*/
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 3%;
     display: flex;
 }
 
 ul.ul li {
     list-style: none;
+/*    padding-right: 20px;*/
 }
 
 
-ul.ul li a:hover {
+/*ul.ul li a:hover {
+    color: red;
 }
-
-ul.ul li div div.text {
+*/
+/*ul.ul li div div.text {
+  display: revert-layer;
+  justify-content: center;
+  align-items: center;
+  word-break: normal;
+}*/
+/*ul.ul li div div.text {
   display: flex;
   justify-content: center;
   align-items: center;
- word-break: break-all;
-}
-ul.ul li div div.text b {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+}*/
 
 /*ul.ul {
     margin: 0 15%;
@@ -210,3 +247,33 @@ ul.ul li:nth-child(even):hover img {
     transform: translateX(-50%) translateY(25px);
 
 }*/
+
+/*.head_2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 12vh;
+    display: flex;
+    align-items: center;}
+}*/
+
+/*header2 {
+    position: absolute;
+    bottom: 0;
+    left: 0; 
+    background: red;  
+}*/
+header .head_2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+/*    background: red;*/
+    height: 12%;
+    width: 100%;
+    font-family: "Tektur", sans-serif;
+    font-size: 4vh;
+    font-weight: 700;
+    color: white;
+    border-top: 0.1vh solid Goldenrod;
+}
