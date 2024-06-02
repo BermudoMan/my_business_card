@@ -1,0 +1,58 @@
+{% extends 'base_en.html' %}
+{% include "publications.html" %}
+
+{% load static %}
+
+{% block Scroll %}
+<div class="Scroll">
+    <ul class="ul">
+            <li class="li"><a href="edu/en"><div class="scrollable-div"><img class='title_img' src="{% static 'title/img/edu2.jpg' %}" alt="1">
+                <div class="text"><p>Education & Experience</p></div></div></a></li>
+            <li class="li"><a href="skills_prog/en"><div class="scrollable-div"><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1">
+                <div class="text">Programming skills</div></div></a></li>
+            <li class="li"><a href="drawing_skills/en"><div class="scrollable-div"><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1">
+                <div class="text">Drawing skills</div></div></a></li>
+            <li class="li"><a href="qc_skills/en"><div class="scrollable-div"><img class='title_img' src="{% static 'title/img/j_title.png' %}" alt="1">
+                <div class="text">Quantum chemical calculation skills</div></div></a></li>
+            <li class="li"><a href="other_skills/en"><div class="scrollable-div"><img class='title_img' src="{% static 'title/img/to_prog_skills.jpg' %}" alt="1">
+                <div class="text">Other skills</div></div></a></li>
+            <li class="li"><a href="project_part/en"><div class="scrollable-div"><img class='title_img' src="{% static 'title/img/my.jpg' %}" alt="1">
+                <div class="text">Engagement in funded projects</div></div></a></li>
+            <li class="li"><a href="project_part/en"><div class="scrollable-div"><img class='title_img' src="{% static 'title/img/publications.png' %}" alt="1">
+                <div class="text">Publications</div></div></a></li>
+            <li class="li"><a href="project_part/en"><div  class="scrollable-div"><img class='title_img' src="{% static 'title/img/publications.png' %}" alt="1">
+                <div class="text">About me</div></div></a></li>
+    </ul>
+</div>
+
+<header>
+    <div class="head_2">
+        <p>
+    </div>
+</header>
+
+<script src="{% static 'title/js/scale.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(document).ready(function() {
+        var docWidth = $('body').width(),
+        slidesWidth = $('ul').width(),
+        rangeX = slidesWidth - docWidth,
+        $images = $('ul');
+
+        $(document).on('mousemove', function(e) {
+              var mouseX = e.pageX,
+                offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+
+              $images.css({
+                '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+                'transform': 'translate3d(' + -offset + 'px,0,0)'
+              });
+            });
+        });
+</script>
+
+    <div class="lang_button" id="btn"><a href="."><button>RU</button></a><a href="/en"><button>EN</button></a></div>
+
+{% endblock %}
+

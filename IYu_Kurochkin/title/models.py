@@ -3,10 +3,13 @@ from django.db import models
 
 class EducationWork(models.Model):
     date = models.CharField(max_length=20, verbose_name='Date')
-    position = models.CharField(max_length=255, verbose_name='status')
+    position = models.CharField(max_length=255, verbose_name='position')
+    position_en = models.CharField(max_length=255, verbose_name='position_en', blank=True, null=True)
     organisation = models.CharField(max_length=255, verbose_name='organisation_name')
-    last_actual_year = models.IntegerField(max_length=4, verbose_name='last_actual_year', blank=True, null=True)
+    organisation_en = models.CharField(max_length=255, verbose_name='organisation_name_en', blank=True, null=True)
+    last_actual_year = models.IntegerField(verbose_name='last_actual_year', blank=True, null=True)
     type = models.CharField(max_length=40, verbose_name='type', blank=True, null=True)
+    type_en = models.CharField(max_length=40, verbose_name='type_en', blank=True, null=True)
 
     def __str__(self):
         return self.position
@@ -51,7 +54,9 @@ class Identificators(models.Model):
 
 class ProjectsParticipate(models.Model):
     project_title = models.CharField(max_length=400, verbose_name='project_title')
+    project_title_en = models.CharField(max_length=400, verbose_name='project_title_en', null=True, blank=True)
     foundation = models.CharField(max_length=300, verbose_name='foundation')
+    foundation_en = models.CharField(max_length=300, verbose_name='foundation_en', null=True, blank=True)
     project_number = models.CharField(max_length=50, verbose_name='project_number')
     project_year_start = models.IntegerField(verbose_name='project_year_start', null=True, blank=True)
     project_year_end = models.IntegerField(verbose_name='project_year_end', null=True, blank=True)

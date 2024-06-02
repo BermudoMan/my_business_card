@@ -1,9 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'base_en.html' %}
 {% load static %}
 
 {% block Skills %}
     <div class="publications_style">
-    <h2>Работа с данными</h2>
+    <h2>Data manipulation</h2>
     <ul>
         {% for s in skills %}
             {% if s.skill_cat_id == 2 %}
@@ -11,7 +11,7 @@
             {% endif %}
         {% endfor %}
     </ul>
-    <h2>Редактирование текста</h2>
+    <h2>Text editing</h2>
     <ul>
         {% for s in skills %}
             {% if s.skill_cat_id == 2 %}
@@ -19,7 +19,7 @@
             {% endif %}
         {% endfor %}
     </ul>
-    <h2>Специфическое ПО</h2>
+    <h2>Specific software</h2>
     <ul>
         {% for s in skills %}
             {% if s.skill_cat_id == 4 %}

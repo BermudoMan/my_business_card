@@ -277,3 +277,27 @@ header .head_2 {
     color: white;
     border-top: 0.1vh solid Goldenrod;
 }
+
+.lang_button {
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+}
+
+.lang_button a button{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    font-size: 4vh;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 0;
+    transition: background 9999999s;
+}
+
+
+.lang_button a button:active{
+    color: goldenrod;
+    transition: background 0s;
+}

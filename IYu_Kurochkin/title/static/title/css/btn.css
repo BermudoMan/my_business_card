@@ -1,0 +1,13 @@
+button {
+  color: white;
+  background-color: black;
+  border: none;
+  outline: none;
+  padding: 1.2rem 2rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.active {
+  background-color: red;
+}

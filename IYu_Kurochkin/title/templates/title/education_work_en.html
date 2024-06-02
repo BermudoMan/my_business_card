@@ -1,12 +1,12 @@
-{% extends 'base.html' %}
+{% extends 'base_en.html' %}
 {% load static %}
 
 {% block Edu %}
     <div class="publications_style">
-    <h2>Образование и опыт работы</h2>
+    <h2>Education & Work experience</h2>
     <ul>
         {% for s in object_list %}
-            <li>{{ s.date }} -- {{ s.position }}[{{ s.type }}] -- {{ s.organisation }} </li>
+            <li>{{ s.date }} -- {{ s.position_en }}[{{ s.type_en }}] -- {{ s.organisation_en }} </li>
         {% endfor %}
     </ul>
     </div>
