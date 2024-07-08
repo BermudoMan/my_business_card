@@ -1,4 +1,4 @@
-{% extends 'base_en.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
 {% block Skills %}
@@ -6,7 +6,7 @@
     <h2>Drawing skills</h2>
     <ul>
         {% for s in skills %}
-            {% if s.skill_cat_id == 3 %}
+            {% if s.skill_cat_id == 1 %}
                 <li>{{ s.skill }}</li>
             {% endif %}
         {% endfor %}

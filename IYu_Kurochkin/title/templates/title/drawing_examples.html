@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block Skills %}
+    <div class="publications_style">
+    <h2>Примеры работ</h2>
+    <ul>
+        {% for s in draw_examples %}
+        		<li><img class="" src="{{ s.img_file.url }}"></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    </div>
+
+<!--    <div class="lang_button"><a href="/drawing_skills"><button>RU</button></a><a href="/drawing_skills/en"><button>EN</button></a></div>-->
+
+{% endblock %}

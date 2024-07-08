@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import View
 from django.views.generic import ListView, DetailView, TemplateView
-from .models import EducationWork, Publications, SkillCategory, ProjectsParticipate, Skills
+from .models import EducationWork, Publications, SkillCategory, ProjectsParticipate, Skills, DrawWorkExamples
 
 
 def title_page(request):
@@ -43,6 +43,11 @@ class SkillsViewDraw(ListView):
     model = Skills
     template_name = 'title/drawing_skills.html'
     context_object_name = 'skills'
+
+class DrawWorkExamplesView(ListView):
+    models = DrawWorkExamples
+    template_name = 'title/drawing_examples.html'
+    context_object_name = 'draw_examples'
 
 
 

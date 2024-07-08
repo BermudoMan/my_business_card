@@ -92,3 +92,16 @@ class SkillCategory(models.Model):
     class Meta:
         verbose_name = 'SkillCategory'
         verbose_name_plural = 'SkillCategory'
+
+
+class DrawWorkExamples(models.Model):
+    name = models.CharField(max_length=100, db_index=True, verbose_name='DrawExample')
+    description = models.CharField(max_length=800, verbose_name='DrawExample_desc')
+    img_file = models.ImageField(upload_to='draw_works/', default=None, blank=True, null=True, verbose_name='draw_works_img')
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'DrawWorkExamples'
+        verbose_name_plural = 'DrawWorkExamples'

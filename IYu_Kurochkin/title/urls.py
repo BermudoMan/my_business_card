@@ -10,6 +10,7 @@ urlpatterns = [
     path('skills', views.SkillsView.as_view(), name='skills'),
     path('skills_prog', views.SkillsViewProg.as_view(), name='skills_prog'),
     path('drawing_skills', views.SkillsViewDraw.as_view(), name='drawing_skills'),
+    path('drawing_skills/example', views.DrawWorkExamplesView.as_view(), name='drawing_skills_example'),
     path('other_skills', views.SkillsOther.as_view(), name='other_skills'),
     path('qc_skills', views.SkillsQC.as_view(), name='qc_skills'),
     path('en', views.title_page_en, ),
@@ -19,6 +20,7 @@ urlpatterns = [
     path('skills/en', views.SkillsViewEn.as_view(), name='skills'),
     path('skills_prog/en', views.SkillsViewProgEn.as_view(), name='skills_prog'),
     path('drawing_skills/en', views.SkillsViewDrawEn.as_view(), name='drawing_skills'),
+    path('drawing_skills/en/example', views.DrawWorkExamplesView.as_view(), name='drawing_skills_example'),
     path('other_skills/en', views.SkillsOtherEn.as_view(), name='other_skills'),
     path('qc_skills/en', views.SkillsQCEn.as_view(), name='qc_skills'),
 ]
