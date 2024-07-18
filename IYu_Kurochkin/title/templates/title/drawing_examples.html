@@ -7,8 +7,7 @@
     <h2>Примеры работ</h2>
     <ul>
         {% for s in draw_examples %}
-        		<li><img class="" src="{{ s.img_file.url }}"></li>
-            {% endif %}
+            <img class="draw_examples" src='/static/title/img/{{ s.img_file }}'>
         {% endfor %}
     </ul>
     </div>

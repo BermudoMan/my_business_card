@@ -173,6 +173,11 @@ ul.ul li {
 }
 
 
+.draw_examples {
+    width: 200px;
+
+
+}
 /*ul.ul li a:hover {
     color: red;
 }

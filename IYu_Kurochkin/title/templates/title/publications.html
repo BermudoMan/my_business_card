@@ -3,7 +3,7 @@
 
 {% block Publ %}
     <div class="publications_style">
-    <h2>Публикации в рецензируемых изданиях</h2>
+    <h2>Публикации</h2>
     <ul>
         {% for s in object_list %}
             <li>{{ s.authors }} "{{ s.article_title }}" / {{ s.journal }} -- {{ s.year }} -- DOI: {{ s.doi }}</li>

@@ -45,7 +45,7 @@ class SkillsViewDraw(ListView):
     context_object_name = 'skills'
 
 class DrawWorkExamplesView(ListView):
-    models = DrawWorkExamples
+    model = DrawWorkExamples
     template_name = 'title/drawing_examples.html'
     context_object_name = 'draw_examples'
 
