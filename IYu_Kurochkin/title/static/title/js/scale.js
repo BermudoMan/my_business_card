@@ -6,5 +6,5 @@ function setZoom() {
     document.body.style.zoom = "70%";
   } else {
     document.body.style.zoom = "100%";
-  }
+    }
 }

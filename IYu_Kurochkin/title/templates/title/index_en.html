@@ -34,24 +34,43 @@
 <script src="{% static 'title/js/scale.js' %}"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script>
-    $(document).ready(function() {
-        var docWidth = $('body').width(),
-        slidesWidth = $('ul').width(),
-        rangeX = slidesWidth - docWidth,
-        $images = $('ul');
+    if (window.matchMedia('(min-width: 780px) and (max-width: 1380px)').matches) {
+        $(document).ready(function() {
+            var docWidth = $('body').width(),
+            slidesWidth = $('ul').width(),
+            rangeX = slidesWidth - docWidth,
+            $images = $('ul');
 
-        $(document).on('mousemove', function(e) {
-              var mouseX = e.pageX,
-                offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+            $(document).on('mousemove', function(e) {
+                  var mouseX = e.pageX,
+                    offset = mouseX / docWidth * slidesWidth - mouseX / 3;
 
-              $images.css({
-                '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
-                'transform': 'translate3d(' + -offset + 'px,0,0)'
-              });
+                  $images.css({
+                    '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+                    'transform': 'translate3d(' + -offset + 'px,0,0)'
+                  });
+                });
             });
-        });
-</script>
+    } else {
+         $(document).ready(function() {
+            var docWidth = $('body').width(),
+            slidesWidth = $('ul').width(),
+            rangeX = slidesWidth - docWidth,
+            $images = $('ul');
 
+            $(document).on('mousemove', function(e) {
+                  var mouseX = e.pageX,
+                    offset = mouseX / docWidth * slidesWidth - mouseX / 1.1;
+
+                  $images.css({
+                    '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+                    'transform': 'translate3d(' + -offset + 'px,0,0)'
+                  });
+                });
+            });
+    }
+</script>
+<script src="{% static 'title/js/btn.js' %}"></script>
     <div class="lang_button" id="btn"><a href="."><button>RU</button></a><a href="/en"><button>EN</button></a></div>
 
 {% endblock %}
