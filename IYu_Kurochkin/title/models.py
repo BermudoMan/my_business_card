@@ -98,7 +98,8 @@ class DrawWorkExamples(models.Model):
     name = models.CharField(max_length=100, db_index=True, verbose_name='DrawExample')
     description = models.CharField(max_length=800, verbose_name='DrawExample_desc')
     img_file = models.ImageField(upload_to='work_examples/', default=None, blank=True, null=True, verbose_name='draw_works_img')
-
+    img_file_max_quality = models.ImageField(upload_to='work_examples/max_quality/', default=None, blank=True, null=True,
+                                 verbose_name='draw_works_img_max_quality')
     def __str__(self):
         return self.name
 

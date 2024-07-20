@@ -176,8 +176,18 @@ ul.ul li {
 .draw_examples {
     width: 200px;
 
-
 }
+
+.button_to_draw_examples {
+    text-decoration: none;
+    color: #9C1B00;
+}
+
+.button_to_draw_examples:hover {
+    text-decoration: none;
+    color: black;
+}
+
 /*ul.ul li a:hover {
     color: red;
 }
@@ -286,7 +296,7 @@ header .head_2 {
 .lang_button {
     position: absolute;
     bottom: 2%;
-    left: 1%;
+    right: 1%;
 }
 
 .lang_button a button{
@@ -305,4 +315,20 @@ header .head_2 {
 .lang_button a button:active{
     color: goldenrod;
     transition: background 0s;
+}
+
+
+
+
+.contacts {
+    text-decoration: none;
+    color: white;
+    position: absolute;
+    bottom: 3%;
+    left: 1%;
+}
+
+.contacts a{
+    text-decoration: none;
+    color: goldenrod;
 }

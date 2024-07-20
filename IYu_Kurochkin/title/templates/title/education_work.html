@@ -6,7 +6,7 @@
     <h2>Образование и опыт работы</h2>
     <ul>
         {% for s in object_list %}
-            <li>{{ s.date }} -- {{ s.position }}[{{ s.type }}] -- {{ s.organisation }} </li>
+            <li>{{ s.date }} -- {{ s.position }}[{{ s.type }}]<br> <b>Организация: {{ s.organisation }}</b> </li>
         {% endfor %}
     </ul>
     </div>

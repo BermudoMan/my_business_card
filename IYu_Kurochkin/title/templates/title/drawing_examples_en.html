@@ -4,12 +4,11 @@
 
 {% block Skills %}
     <div class="publications_style">
-    <h2>Примеры работ</h2>
+    <h2>Work examples</h2>
     <ul>
         {% for s in draw_examples %}
-            <button><a target="_blank" href='/static/title/img/{{ s.img_file_max_quality }}'>
-                <img class="draw_examples" src='/static/title/img/{{ s.img_file }}'>
-            </button>
+            <img class="draw_examples" src='/static/title/img/{{ s.img_file }}'>
+            <button><a href='/static/title/img/{{ s.img_file_max_quality }}'>test</button>
         {% endfor %}
     </ul>
     </div>

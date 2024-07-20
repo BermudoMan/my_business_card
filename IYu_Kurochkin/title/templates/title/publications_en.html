@@ -6,7 +6,8 @@
     <h2>Publications</h2>
     <ul>
         {% for s in object_list %}
-            <li>{{ s.authors }} "{{ s.article_title }}" / {{ s.journal }} -- {{ s.year }} -- DOI: {{ s.doi }}</li>
+            <li><b>{{ s.authors }}</b> <br><i>"{{ s.article_title }}"</i> <br> <u>Journal:</u> {{ s.journal }} -- {{ s.year }}
+                -- <b><font color='9C1B00'>DOI: {{ s.doi }}</font></b></li>
         {% endfor %}
     </ul>
     </div>

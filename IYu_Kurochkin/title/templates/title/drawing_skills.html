@@ -3,7 +3,7 @@
 
 {% block Skills %}
     <div class="publications_style">
-    <h2>Работа с изображениями</h2>
+    <h2>Работа с изображениями  <a class="button_to_draw_examples" href="drawing_skills/example">(К примерам работ)</a></h2>
     <ul>
         {% for s in skills %}
             {% if s.skill_cat_id == 1 %}
@@ -11,8 +11,8 @@
             {% endif %}
         {% endfor %}
     </ul>
-        <h3><a href="drawing_skills/example">buttom</a></h3>
     </div>
+
 
     <div class="lang_button"><a href="/drawing_skills"><button>RU</button></a><a href="/drawing_skills/en"><button>EN</button></a></div>
 
